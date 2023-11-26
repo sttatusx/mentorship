@@ -1,0 +1,98 @@
+.main {
+  direction: rtl;
+  padding: 0 64px;
+  max-width: 1440px;
+  margin: 64px auto 0;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    &__tabs {
+      margin-top: 16px;
+    }
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tabs {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    list-style: none;
+    color: #333333;
+
+    &:not(:first-of-type) {
+      margin-right: 32px;
+    }
+  }
+
+  &__list-button {
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.mentor-cards {
+  display: grid;
+  margin-top: 56px;
+  grid-gap: 64px 32px;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.mentor-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__image-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  &__image {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  &__name {
+    margin-top: 16px;
+    font-weight: bold;
+  }
+
+  &__expertise {
+    margin-top: 8px;
+  }
+
+  &__contact {
+    margin-top: 16px;
+    text-decoration: underline;
+  }
+}
